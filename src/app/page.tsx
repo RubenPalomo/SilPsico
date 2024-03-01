@@ -1,8 +1,11 @@
-import Header from "../components/Header/Header";
+import Header from "./components/Header/Header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
+    <main
+      className="flex min-h-screen flex-col items-center justify-between"
+      data-testid="home"
+    >
       <Header />
     </main>
   );

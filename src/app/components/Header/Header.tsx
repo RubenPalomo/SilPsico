@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderMenuComponent from "./HeaderMenu/HeaderMenu";
+import HeaderMenuComponent from "./HeaderMenuComponent/HeaderMenuComponent";
 import HeaderIconComponent from "./HeaderIconComponent/HeaderIconComponent";
 
 export default function Header() {

@@ -1,7 +1,9 @@
 import React from "react";
-import { HeaderMenuProps } from "./HeaderMenu.props";
+import { HeaderMenuComponentProps } from "./HeaderMenuComponent.props";
 
-export default function HeaderMenuComponent({ menuElements }: HeaderMenuProps) {
+export default function HeaderMenuComponent({
+  menuElements,
+}: HeaderMenuComponentProps) {
   return (
     <nav>
       <ul className="flex space-x-4 mt-2">
