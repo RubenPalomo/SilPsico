@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Silvia de Isidro",
-  description: "Tu mente en buenas manos",
+  description: "Psicóloga clínica especializada en Neuropsicología",
 };
 
 export default function RootLayout({
