@@ -24,6 +24,5 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   transformIgnorePatterns: ["<rootDir>/node_modules/"],
   testRegex: "app/.*\\.test\\.(js|ts|tsx)$",
-  reactStrictMode: true,
 };
 module.exports = createJestConfig(customJestConfig);
