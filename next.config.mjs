@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: process.env.NODE_ENV === "production" ? "/SilPsico" : "",
+  basePath: "/SilPsico",
+  output: "export",
+  reactStrictMode: true,
 };
 
 export default nextConfig;
