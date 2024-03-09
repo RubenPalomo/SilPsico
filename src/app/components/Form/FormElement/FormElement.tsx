@@ -1,7 +1,12 @@
 import React from "react";
 import { FormElementProps } from "./FormElement.props";
 
-export default function FormElement({ label, name, type }: FormElementProps) {
+export default function FormElement({
+  label,
+  name,
+  type,
+  required,
+}: FormElementProps) {
   return (
     <div className="flex mx-auto my-1" style={{ maxWidth: "350px" }}>
       <div className="flex flex-grow items-center w-60 ">
@@ -10,7 +15,7 @@ export default function FormElement({ label, name, type }: FormElementProps) {
           name={name}
           type={type ? type : "text"}
           placeholder={label}
-          required
+          required={required}
         />
       </div>
     </div>

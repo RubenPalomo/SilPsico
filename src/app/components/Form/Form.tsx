@@ -30,6 +30,8 @@ export default function Form({ showGratitude, resetGratitude }: FormProps) {
       name: formData.get("name") as string,
       lastName: formData.get("lastName") as string,
       phone: parseInt(formData.get("phone") as string),
+      email: formData.get("email") as string,
+      option: formData.get("option") as string,
     };
 
     if (e.currentTarget) e.currentTarget.reset();
@@ -48,9 +50,22 @@ export default function Form({ showGratitude, resetGratitude }: FormProps) {
       onSubmit={handleSubmit}
     >
       <div className="mb-5">
-        <FormElement label="Nombre" name="name" />
-        <FormElement label="Apellido" name="lastName" />
-        <FormElement label="Teléfono" name="phone" type="number" />
+        <FormElement label="Nombre" name="name" required={true} />
+        <FormElement label="Apellido" name="lastName" required={true} />
+        <FormElement
+          label="Teléfono"
+          name="phone"
+          type="number"
+          required={true}
+        />
+        <FormElement label="Email" name="email" required={false} />
+        <div className="mt-2">
+          <p>¿Por dónde prefieres hablar?</p>
+          <select className="w-full" name="option">
+            <option>Teléfono</option>
+            <option>Email</option>
+          </select>
+        </div>
       </div>
       <div className="flex relative items-center justify-center w-full">
         <Button

@@ -28,7 +28,9 @@ export default function ContactPage(): ReactNode {
           <p className="text-4xl text-red-500 font-light italic text-center">
             ¡Muchas gracias!
           </p>
-          <p>Nos pondremos en contacto contigo lo antes posible</p>
+          <p className="text-center text-sm sm:text-base">
+            Nos pondremos en contacto contigo lo antes posible
+          </p>
         </div>
       </div>
     </div>
