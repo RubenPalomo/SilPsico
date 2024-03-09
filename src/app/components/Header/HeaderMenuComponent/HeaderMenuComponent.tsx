@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { HeaderMenuComponentProps } from "./HeaderMenuComponent.props";
 
@@ -9,16 +10,16 @@ export default function HeaderMenuComponent({
       <ul className="flex space-x-4 mt-2 mr-2 justify-end">
         {menuElements.map((element, index) => (
           <li key={index}>
-            <a
+            <Link
               href={
                 element === "Sobre mi"
-                  ? "/SilPsico"
-                  : `/SilPsico/${element.replaceAll(" ", "").toLowerCase()}`
+                  ? "/"
+                  : `/${element.replaceAll(" ", "").toLowerCase()}`
               }
               className="hover:underline"
             >
               <p className="text-xs sm:text-base">{element}</p>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

@@ -14,6 +14,7 @@ export default function FormElement({
           className="border-2 rounded-md w-full p-2"
           name={name}
           type={type ? type : "text"}
+          onChange={(e) => e.preventDefault()}
           placeholder={label}
           required={required}
         />

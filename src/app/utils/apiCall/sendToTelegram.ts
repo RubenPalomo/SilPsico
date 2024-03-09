@@ -15,11 +15,13 @@ export const sendToTelegram = async (
       },
       body: JSON.stringify({
         chat_id: TELEGRAM_ID,
-        text: `*Nombre:* ${formData.name} ${formData.lastName}\n*Teléfono:* ${
-          formData.phone
-        }${
+        text: `*Nombre:* ${formData.name} ${formData.lastName}
+        ${formData.phone && `\n*Teléfono:* ${formData.phone}`}
+        ${
           formData.email && `\n*Email:* ${formData.email}`
-        }\n\nPrefiere hablar por ${formData.option.toLowerCase()}`,
+        }\n*Motivo de consulta:* ${
+          formData.text
+        }\nPrefiere hablar por *${formData.option.toLowerCase()}*`,
         parse_mode: "Markdown",
       }),
     }

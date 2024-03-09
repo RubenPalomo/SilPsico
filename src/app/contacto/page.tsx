@@ -3,9 +3,10 @@
 import React, { ReactNode, useState } from "react";
 import Form from "../components/Form/Form";
 import Header from "../components/Header/Header";
+import GratitudePopup from "../components/GratitudePopup/GratitudePopup";
 
 export default function ContactPage(): ReactNode {
-  const [showGratitude, setShowGratitude] = useState(true);
+  const [showGratitude, setShowGratitude] = useState<boolean>(false);
 
   return (
     <div className="flex flex-col h-screen w-screen bg-lime-50">
@@ -15,23 +16,15 @@ export default function ContactPage(): ReactNode {
         <p className="text-sm">¿Quieres ponerte en contacto conmigo?</p>
         <Form
           showGratitude={() => {
-            setShowGratitude(false);
-          }}
-          resetGratitude={() => {
             setShowGratitude(true);
           }}
         />
-        <div
-          className="absolute bottom-12 2xl:bottom-28"
-          hidden={showGratitude}
-        >
-          <p className="text-4xl text-red-500 font-light italic text-center">
-            ¡Muchas gracias!
-          </p>
-          <p className="text-center text-sm sm:text-base">
-            Nos pondremos en contacto contigo lo antes posible
-          </p>
-        </div>
+        <GratitudePopup
+          hidden={!showGratitude}
+          closePopup={() => {
+            setShowGratitude(false);
+          }}
+        />
       </div>
     </div>
   );
