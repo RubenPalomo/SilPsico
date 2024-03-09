@@ -12,7 +12,7 @@ export default function GratitudePopup({
 
   return (
     <div
-      className="absolute bg-white p-5 border shadow rounded-xl mx-10"
+      className="absolute bg-white bg-opacity-80 p-5 border shadow rounded-xl mx-10"
       hidden={hidden}
     >
       <p className="text-2xl sm:text-4xl text-red-500 font-light italic text-center my-2">
