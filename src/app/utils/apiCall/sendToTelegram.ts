@@ -19,9 +19,9 @@ export const sendToTelegram = async (
         ${formData.phone && `\n*Teléfono:* ${formData.phone}`}
         ${
           formData.email && `\n*Email:* ${formData.email}`
-        }\n*Motivo de consulta:* ${
+        }\n\n*Motivo de consulta:* ${
           formData.text
-        }\nPrefiere hablar por *${formData.option.toLowerCase()}*`,
+        }\n\nPrefiere hablar por *${formData.option.toLowerCase()}*`,
         parse_mode: "Markdown",
       }),
     }

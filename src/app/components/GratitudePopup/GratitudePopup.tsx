@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import React from "react";
 import { GratitudePopupProps } from "./GratitudePopup.props";
 
@@ -6,10 +5,6 @@ export default function GratitudePopup({
   hidden,
   closePopup,
 }: GratitudePopupProps) {
-  useEffect(() => {
-    console.log(hidden);
-  }, [hidden]);
-
   return (
     <div
       className="absolute bg-white bg-opacity-80 p-5 border shadow rounded-xl mx-10"

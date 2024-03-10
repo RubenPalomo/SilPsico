@@ -16,6 +16,8 @@ export default function Form({ showGratitude }: FormProps) {
   const resetFeedback = (): void => {
     setError(false);
     setLoading(false);
+    setIsPhoneEntered(false);
+    setIsEmailEntered(false);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
