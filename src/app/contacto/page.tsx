@@ -1,9 +1,9 @@
 "use client";
 
 import React, { ReactNode, useState } from "react";
-import Form from "../components/Form/Form";
+import Form from "./components/Form/Form";
 import Header from "../components/Header/Header";
-import GratitudePopup from "../components/GratitudePopup/GratitudePopup";
+import GratitudePopup from "./components/GratitudePopup/GratitudePopup";
 
 export default function ContactPage(): ReactNode {
   const [showGratitude, setShowGratitude] = useState<boolean>(false);
