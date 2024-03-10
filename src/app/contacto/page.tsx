@@ -9,7 +9,7 @@ export default function ContactPage(): ReactNode {
   const [showGratitude, setShowGratitude] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col h-screen w-screen bg-lime-50">
+    <div className="flex flex-col h-full min-h-screen w-full bg-lime-50">
       <Header />
       <div className="flex flex-col items-center justify-center h-full mb-36">
         <h1 className="text-4xl font-bold italic">Contacto</h1>

@@ -1,10 +1,12 @@
+import React from "react";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import TextArea from "./components/TextArea/TextArea";
 
 export default function Home() {
   return (
     <main
-      className="flex min-h-screen flex-col items-center bg-lime-50"
+      className="flex h-full min-h-screen flex-col items-center bg-lime-50"
       data-testid="home"
     >
       <Header />
@@ -17,8 +19,10 @@ export default function Home() {
         />
         <TextArea
           title="Patologías"
-          text={`Especializada en tratamiento de daño cerebral adquirido:
-  · Ictus
+          text={
+            "Especializada en tratamiento de daño cerebral adquirido:" +
+            "\n· Ictus" +
+            `
   · Traumatismos craneoencefálicos
   · Tumores cerebrales
   Así como en trastornos del desarrollo:
@@ -28,9 +32,11 @@ Y en psicología clínica:
   · Ansiedad
   · Depresión
   · Estrés
-  · Duelo`}
+  · Duelo`
+          }
         />
       </div>
+      <Footer />
     </main>
   );
 }
