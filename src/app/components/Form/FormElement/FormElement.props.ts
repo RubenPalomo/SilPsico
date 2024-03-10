@@ -3,4 +3,5 @@ export interface FormElementProps {
   name: string;
   required: boolean;
   type?: string;
+  updateStatus?: React.Dispatch<React.SetStateAction<boolean>>;
 }

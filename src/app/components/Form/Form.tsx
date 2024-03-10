@@ -10,6 +10,8 @@ import { FormDataType } from "@/app/utils/models/formDataType";
 export default function Form({ showGratitude }: FormProps) {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
+  const [isPhoneEntered, setIsPhoneEntered] = useState<boolean>(false);
+  const [isEmailEntered, setIsEmailEntered] = useState<boolean>(false);
 
   const resetFeedback = (): void => {
     setError(false);
@@ -56,9 +58,15 @@ export default function Form({ showGratitude }: FormProps) {
           label="Teléfono"
           name="phone"
           type="number"
-          required={true}
+          required={false}
+          updateStatus={setIsPhoneEntered}
         />
-        <FormElement label="Email" name="email" required={false} />
+        <FormElement
+          label="Email"
+          name="email"
+          required={false}
+          updateStatus={setIsEmailEntered}
+        />
         <div className="mt-2">
           <p>¿Por dónde prefieres hablar?</p>
           <select className="w-full p-1" name="option">
@@ -79,6 +87,7 @@ export default function Form({ showGratitude }: FormProps) {
           className="w-28 h-9 bg-blue-500"
           variant="contained"
           type="submit"
+          disabled={!isPhoneEntered && !isEmailEntered ? true : false}
         >
           {loading ? (
             <div className="border-2 loading-spinner border-solid border-blue-300 border-t-white rounded-full w-5 h-5 animate-spin" />
