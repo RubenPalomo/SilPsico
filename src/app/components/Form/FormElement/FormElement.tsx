@@ -4,7 +4,6 @@ import { FormElementProps } from "./FormElement.props";
 export default function FormElement({
   label,
   name,
-  type,
   required,
   updateStatus,
 }: FormElementProps) {
@@ -27,10 +26,10 @@ export default function FormElement({
         <input
           className="border-2 rounded-md w-full p-2"
           name={name}
-          type={type ? type : "text"}
-          onChange={handleOnChange}
           placeholder={label}
           required={required}
+          maxLength={name === "phone" ? 12 : 35}
+          onChange={handleOnChange}
         />
       </div>
     </div>

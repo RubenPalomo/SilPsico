@@ -57,7 +57,6 @@ export default function Form({ showGratitude }: FormProps) {
         <FormElement
           label="Teléfono"
           name="phone"
-          type="number"
           required={false}
           updateStatus={setIsPhoneEntered}
         />
@@ -87,7 +86,7 @@ export default function Form({ showGratitude }: FormProps) {
           className="w-28 h-9 bg-blue-500"
           variant="contained"
           type="submit"
-          disabled={isPhoneEntered || isEmailEntered}
+          disabled={!isPhoneEntered && !isEmailEntered}
         >
           {loading ? (
             <div className="border-2 loading-spinner border-solid border-blue-300 border-t-white rounded-full w-5 h-5 animate-spin" />
