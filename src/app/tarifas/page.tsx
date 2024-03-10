@@ -75,15 +75,15 @@ export default function PricesPage() {
       </div>
       <ul className="flex flex-col mt-10 mx-auto w-[80vw]">
         <li className="text-sm">
-          · Política de cancelación o cambio de sesiones: Se cobrará la sesión
+          • Política de cancelación o cambio de sesiones: Se cobrará la sesión
           si no se avisa con un mínimo de 24h
         </li>
         <li className="text-sm">
-          · La duración de las sesiones puede variar dependiendo de la
+          • La duración de las sesiones puede variar dependiendo de la
           valoración inicial
         </li>
         <li className="text-sm">
-          · El precio de las sesiones a domicilio puede variar dependiendo del
+          • El precio de las sesiones a domicilio puede variar dependiendo del
           lugar del domicilio.
         </li>
       </ul>
