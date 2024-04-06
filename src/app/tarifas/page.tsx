@@ -13,9 +13,9 @@ export default function PricesPage() {
             title="Bono mensual 1"
             price="XX"
             plan={[
-              "Sesiones de 50'",
-              "1 Sesión/semana",
-              "Modalidad a domicilio",
+              "Duración: Sesiones de 50 minutos",
+              "Sesiones: 1 Sesión/semana",
+              "Modalidad: A domicilio",
               "Pago por adelantado",
             ]}
           />
@@ -25,9 +25,9 @@ export default function PricesPage() {
             title="Bono mensual 2"
             price="XX"
             plan={[
-              "Sesiones de 50'",
-              "2 Sesiones/semana",
-              "Modalidad a domicilio",
+              "Duración: Sesiones de 50 minutos",
+              "Sesiones: 2 Sesiones/semana",
+              "Modalidad: A domicilio",
               "Pago por adelantado",
             ]}
           />
@@ -37,9 +37,9 @@ export default function PricesPage() {
             title="Bono mensual 3"
             price="XX"
             plan={[
-              "Sesiones de 50'",
-              "3 Sesiones/semana",
-              "Modalidad a domicilio",
+              "Duración: Sesiones de 50 minutos",
+              "Sesiones: 3 Sesiones/semana",
+              "Modalidad: A domicilio",
               "Pago por adelantado",
             ]}
           />
@@ -51,9 +51,9 @@ export default function PricesPage() {
             title="Bono Clínica"
             price="XX"
             plan={[
-              "Sesiones de 50'",
+              "Duración: Sesiones de 50 minutos",
               "Solo psicología clínica",
-              "Modalidad online",
+              "Modalidad: Online",
               "Pago por adelantado",
             ]}
           />
@@ -75,15 +75,15 @@ export default function PricesPage() {
       <ul className="flex flex-col mt-10 mx-auto w-[80vw]">
         <li className="text-sm">
           • 1a SESIÓN de VALORACIÓN INICIAL y RECOGIDA DE INFORMACIÓN. Aprox.
-          60 minutos
+          60 minutos.
         </li>
         <li className="text-sm">
           • Política de cancelación o cambio de sesiones: Se cobrará la sesión
-          si no se avisa con un mínimo de 24h
+          si no se avisa con un mínimo de 24h.
         </li>
         <li className="text-sm">
           • La duración de las sesiones puede variar dependiendo de la
-          valoración inicial
+          valoración inicial.
         </li>
         <li className="text-sm">
           • El precio de las sesiones a domicilio puede variar dependiendo del
