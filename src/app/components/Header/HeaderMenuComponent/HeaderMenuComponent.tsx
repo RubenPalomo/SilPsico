@@ -11,11 +11,7 @@ export default function HeaderMenuComponent({
         {menuElements.map((element, index) => (
           <li key={index}>
             <Link
-              href={
-                element === "Sobre mi"
-                  ? "/"
-                  : `/${element.replaceAll(" ", "").toLowerCase()}`
-              }
+              href={`/${element.replaceAll(" ", "").toLowerCase()}`}
               className="hover:underline"
             >
               <p className="text-xs sm:text-base">{element}</p>

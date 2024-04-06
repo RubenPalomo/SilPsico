@@ -5,8 +5,8 @@ export default function HeaderIconComponent() {
     <div className="absolute top-2 md:top-4 left-4">
       <picture>
         <img
-          src={"imgs/sil-psico-icon.png"}
-          alt={"icon"}
+          src="imgs/sil-psico-icon.png"
+          alt="icon"
           className="w-16"
           data-testid="icon"
         />

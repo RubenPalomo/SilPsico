@@ -9,10 +9,10 @@ export default function ContactPage(): ReactNode {
   const [showGratitude, setShowGratitude] = useState<boolean>(false);
 
   return (
-    <div className="flex flex-col h-full min-h-screen w-full bg-lime-50">
+    <div className="flex flex-col justify-center items-center w-full bg-white">
       <Header />
-      <div className="flex flex-col items-center justify-center h-full mb-36">
-        <h1 className="text-4xl font-bold italic">Contacto</h1>
+      <div className="flex flex-col items-center justify-center w-fit bg-lime-50 p-8 border rounded mb-36">
+        <h1 className="text-2xl sm:text-4xl font-bold italic">Contacto</h1>
         <p className="text-sm">¿Quieres ponerte en contacto conmigo?</p>
         <Form
           showGratitude={() => {

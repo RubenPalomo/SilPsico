@@ -1,11 +1,10 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
 import PriceBox from "./components/PriceBox/PriceBox";
 
 export default function PricesPage() {
   return (
-    <div className="h-full min-h-screen bg-lime-50">
+    <div className="h-full min-h-screen bg-white">
       <Header />
       <h1 className="text-lg font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
       <div className="flex flex-wrap justify-center">
@@ -75,6 +74,10 @@ export default function PricesPage() {
       </div>
       <ul className="flex flex-col mt-10 mx-auto w-[80vw]">
         <li className="text-sm">
+          • 1a SESIÓN de VALORACIÓN INICIAL y RECOGIDA DE INFORMACIÓN. Aprox.
+          60'
+        </li>
+        <li className="text-sm">
           • Política de cancelación o cambio de sesiones: Se cobrará la sesión
           si no se avisa con un mínimo de 24h
         </li>
@@ -87,7 +90,6 @@ export default function PricesPage() {
           lugar del domicilio.
         </li>
       </ul>
-      <Footer />
     </div>
   );
 }
