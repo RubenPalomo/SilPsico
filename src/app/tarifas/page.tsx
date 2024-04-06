@@ -75,7 +75,7 @@ export default function PricesPage() {
       <ul className="flex flex-col mt-10 mx-auto w-[80vw]">
         <li className="text-sm">
           • 1a SESIÓN de VALORACIÓN INICIAL y RECOGIDA DE INFORMACIÓN. Aprox.
-          60'
+          60 minutos
         </li>
         <li className="text-sm">
           • Política de cancelación o cambio de sesiones: Se cobrará la sesión
