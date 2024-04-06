@@ -19,7 +19,7 @@ export default function Home() {
       />
       <div className="flex flex-col justify-center items-center w-full h-96">
         <h1 className="font-bold text-xl sm:text-4xl text-center mb-10">
-          Tratamiento Psicológico a domicilio
+          Terapia Neuropsicológica a domicilio
         </h1>
         <p className="font-bold text-xl text-center">Sur de Madrid</p>
         <p className="font-bold text-center">
