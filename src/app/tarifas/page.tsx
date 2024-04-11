@@ -6,7 +6,7 @@ export default function PricesPage() {
   return (
     <div className="h-full min-h-screen bg-white">
       <Header />
-      <h1 className="text-lg font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
+      <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
       <div className="flex flex-wrap justify-center">
         <div className="flex w-80">
           <PriceBox

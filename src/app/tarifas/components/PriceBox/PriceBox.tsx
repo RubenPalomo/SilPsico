@@ -3,7 +3,7 @@ import { PriceBoxProps } from "./PriceBox.props";
 
 export default function PriceBox({ title, price, plan }: PriceBoxProps) {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-lime-50 rounded-lg shadow-lg m-2 p-2 border-2 border-black">
+    <div className="flex flex-col items-center justify-center w-full bg-lime-50 bg-opacity-60 rounded-lg shadow-lg m-2 p-2 border-2 border-black">
       <h2 className="font-bold sm:text-xl">{title.toUpperCase()}</h2>
       <div className="flex flex-row my-5">
         <p className="text-5xl font-semibold">{price}€</p>
