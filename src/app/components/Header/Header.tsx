@@ -2,9 +2,9 @@ import Link from "next/link";
 import React from "react";
 import HeaderMenuComponent from "./HeaderMenuComponent/HeaderMenuComponent";
 
-export default function Header() {
+export default function Header({ currentPage }: { currentPage: string }) {
   return (
-    <header className="flex justify-between w-full bg-white min-h-32 sm:min-h-0 pl-8 py-8 sticky top-0 z-50">
+    <header className="flex flex-col md:flex-row justify-between w-full bg-white h-fit p-4 sticky top-0 z-50">
       <Link href={"/"}>
         <h1 className="md:text-3xl font-bold">Silvia de Isidro Delgado</h1>
         <p className="text-xs sm:text-sm">
@@ -12,7 +12,14 @@ export default function Header() {
         </p>
       </Link>
       <HeaderMenuComponent
-        menuElements={["Sobre mi", "Patologias", "Tarifas", "Contacto"]}
+        menuElements={[
+          "Inicio",
+          "Sobre mi",
+          "Patologias",
+          "Tarifas",
+          "Contacto",
+        ]}
+        currentPage={currentPage}
       />
     </header>
   );

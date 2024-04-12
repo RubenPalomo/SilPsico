@@ -4,17 +4,31 @@ import { HeaderMenuComponentProps } from "./HeaderMenuComponent.props";
 
 export default function HeaderMenuComponent({
   menuElements,
+  currentPage,
 }: HeaderMenuComponentProps) {
+  const currentPath = currentPage.replaceAll(" ", "").toLowerCase();
+
   return (
-    <nav className="min-w-52 absolute right-6 top-24 md:top-10 sm:top-20">
-      <ul className="flex space-x-4 mt-2 mr-2 justify-end">
+    <nav className="flex justify-end min-w-52">
+      <ul className="flex space-x-4 mt-2 mr-2">
         {menuElements.map((element, index) => (
           <li key={index}>
             <Link
-              href={`/${element.replaceAll(" ", "").toLowerCase()}`}
-              className="hover:underline"
+              href={
+                element === "Inicio"
+                  ? "/"
+                  : `/${element.replaceAll(" ", "").toLowerCase()}`
+              }
             >
-              <p className="text-xs sm:text-base">{element}</p>
+              <p
+                className={`text-xs sm:text-base transition-transform transform-gpu ${
+                  currentPath === element.replaceAll(" ", "").replace("Inicio", "/").toLowerCase()
+                    ? "scale-110 border-b-2 border-blue-400"
+                    : "hover:scale-110"
+                } `}
+              >
+                {element}
+              </p>
             </Link>
           </li>
         ))}

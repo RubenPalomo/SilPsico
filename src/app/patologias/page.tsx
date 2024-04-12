@@ -8,7 +8,7 @@ export default function PathologiesPage() {
       className="flex w-full h-full min-h-screen flex-col items-center bg-white"
       data-testid="pathologies"
     >
-      <Header />
+      <Header currentPage="Patologias" />
       <div className="flex flex-wrap justify-between w-[90vw] mx-6">
         <TextArea
           title="Recibe tu tratamiento de NEUROPSICOLOGÍA a domicilio"

@@ -10,7 +10,7 @@ export default function AboutMePage() {
       className="flex w-full h-full min-h-screen flex-col items-center bg-white"
       data-testid="about-me"
     >
-      <Header />
+      <Header currentPage="Sobre Mi"/>
       <div className="flex flex-wrap justify-center md:justify-between w-[90vw] mx-6">
         <div className="flex justify-center w-full xl:w-96">
           <Image

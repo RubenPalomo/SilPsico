@@ -10,7 +10,7 @@ export default function ContactPage(): ReactNode {
 
   return (
     <div className="flex flex-col justify-center items-center w-full bg-white">
-      <Header />
+      <Header currentPage="Contacto" />
       <div className="flex flex-col items-center justify-center w-fit bg-lime-50 bg-opacity-60 p-8 border rounded-xl mb-36">
         <h1 className="text-2xl sm:text-4xl font-bold italic">Contacto</h1>
         <p className="text-sm">¿Quieres ponerte en contacto conmigo?</p>

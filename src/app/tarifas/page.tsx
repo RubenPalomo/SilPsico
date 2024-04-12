@@ -5,7 +5,7 @@ import PriceBox from "./components/PriceBox/PriceBox";
 export default function PricesPage() {
   return (
     <div className="h-full min-h-screen bg-white">
-      <Header />
+      <Header currentPage="Tarifas" />
       <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
       <div className="flex flex-wrap justify-center">
         <div className="flex w-80">
@@ -74,8 +74,8 @@ export default function PricesPage() {
       </div>
       <ul className="flex flex-col mt-10 mx-auto w-[80vw]">
         <li className="text-sm">
-          • 1a SESIÓN de VALORACIÓN INICIAL y RECOGIDA DE INFORMACIÓN. Aprox.
-          60 minutos.
+          • 1a SESIÓN de VALORACIÓN INICIAL y RECOGIDA DE INFORMACIÓN. Aprox. 60
+          minutos.
         </li>
         <li className="text-sm">
           • Política de cancelación o cambio de sesiones: Se cobrará la sesión
