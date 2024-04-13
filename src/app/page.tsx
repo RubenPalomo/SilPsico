@@ -18,8 +18,8 @@ export default function Home() {
   const handleTouchEnd = (e: any) => {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
-    if (deltaX > 400) router.push("/contacto");
-    else if (deltaX < -400) router.push("/sobremi");
+    if (deltaX > 50) router.push("/contacto");
+    else if (deltaX < -50) router.push("/sobremi");
 
     setTouchStartX(0);
   };

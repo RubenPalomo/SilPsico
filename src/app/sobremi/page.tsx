@@ -18,8 +18,8 @@ export default function AboutMePage() {
   const handleTouchEnd = (e: any) => {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
-    if (deltaX > 400) router.push("/");
-    else if (deltaX < -400) router.push("/patologias");
+    if (deltaX > 50) router.push("/");
+    else if (deltaX < -50) router.push("/patologias");
 
     setTouchStartX(0);
   };

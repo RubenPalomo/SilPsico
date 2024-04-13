@@ -16,8 +16,8 @@ export default function PricesPage() {
   const handleTouchEnd = (e: any) => {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
-    if (deltaX > 400) router.push("/patologias");
-    else if (deltaX < -400) router.push("/contacto");
+    if (deltaX > 50) router.push("/patologias");
+    else if (deltaX < -50) router.push("/contacto");
 
     setTouchStartX(0);
   };

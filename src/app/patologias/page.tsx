@@ -16,8 +16,8 @@ export default function PathologiesPage() {
   const handleTouchEnd = (e: any) => {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
-    if (deltaX > 400) router.push("/sobremi");
-    else if (deltaX < -400) router.push("/tarifas");
+    if (deltaX > 50) router.push("/sobremi");
+    else if (deltaX < -50) router.push("/tarifas");
 
     setTouchStartX(0);
   };

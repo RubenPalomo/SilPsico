@@ -18,8 +18,8 @@ export default function ContactPage(): ReactNode {
   const handleTouchEnd = (e: any) => {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
-    if (deltaX > 400) router.push("/tarifas");
-    else if (deltaX < -400) router.push("/");
+    if (deltaX > 50) router.push("/tarifas");
+    else if (deltaX < -50) router.push("/");
 
     setTouchStartX(0);
   };
