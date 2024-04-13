@@ -1,16 +1,37 @@
-import React from "react";
+"use client";
+
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import Title from "./components/Title/Title";
 import Image from "next/image";
 import sil from "./components/sil.jpeg";
 
 export default function AboutMePage() {
+  const router = useRouter();
+  const [touchStartX, setTouchStartX] = useState(0);
+
+  const handleTouchStart = (e: any) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: any) => {
+    const deltaX = e.changedTouches[0].clientX - touchStartX;
+
+    if (deltaX > 400) router.push("/");
+    else if (deltaX < -400) router.push("/patologias");
+
+    setTouchStartX(0);
+  };
+
   return (
     <main
       className="flex w-full h-full min-h-screen flex-col items-center bg-white"
       data-testid="about-me"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
-      <Header currentPage="Sobre Mi"/>
+      <Header currentPage="Sobre Mi" />
       <div className="flex flex-wrap justify-center md:justify-between w-[90vw] mx-6">
         <div className="flex justify-center w-full xl:w-96">
           <Image

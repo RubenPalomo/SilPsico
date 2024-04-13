@@ -1,10 +1,33 @@
-import React from "react";
+"use client";
+
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import PriceBox from "./components/PriceBox/PriceBox";
 
 export default function PricesPage() {
+  const router = useRouter();
+  const [touchStartX, setTouchStartX] = useState(0);
+
+  const handleTouchStart = (e: any) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: any) => {
+    const deltaX = e.changedTouches[0].clientX - touchStartX;
+
+    if (deltaX > 400) router.push("/patologias");
+    else if (deltaX < -400) router.push("/contacto");
+
+    setTouchStartX(0);
+  };
+
   return (
-    <div className="h-full min-h-screen bg-white">
+    <div
+      className="h-full min-h-screen bg-white"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <Header currentPage="Tarifas" />
       <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
       <div className="flex flex-wrap justify-center">

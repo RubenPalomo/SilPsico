@@ -22,7 +22,11 @@ export default function HeaderMenuComponent({
             >
               <p
                 className={`text-xs sm:text-base transition-transform transform-gpu ${
-                  currentPath === element.replaceAll(" ", "").replace("Inicio", "/").toLowerCase()
+                  currentPath ===
+                  element
+                    .replaceAll(" ", "")
+                    .replace("Inicio", "/")
+                    .toLowerCase()
                     ? "scale-110 border-b-2 border-blue-400"
                     : "hover:scale-110"
                 } `}
