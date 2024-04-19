@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import logo from "./components/consulta.jpg";
@@ -56,13 +56,10 @@ export default function Home() {
             Terapia de Psicología Clínica online
           </h1>
           <h2 className="font-bold text-xl sm:text-2xl text-center">
-            En remoto
-          </h2>
-          <p className="font-bold text-lg md:text-xl text-center">
             Desde cualquier lugar
-          </p>
+          </h2>
         </div>
-        <div className="flex mt-20">
+        <div className="flex mt-4">
           <Link
             href="/contacto"
             className="bg-blue-200 p-4 px-8 rounded-3xl transition-transform transform-gpu hover:scale-110"

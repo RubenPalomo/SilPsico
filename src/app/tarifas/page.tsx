@@ -31,7 +31,7 @@ export default function PricesPage() {
       <Header currentPage="Tarifas" />
       <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
       <div className="flex flex-wrap justify-center">
-        <div className="flex w-80">
+        <div className="flex w-96 sm:w-80">
           <PriceBox
             title="Bono mensual 1"
             price="XX"
@@ -43,7 +43,7 @@ export default function PricesPage() {
             ]}
           />
         </div>
-        <div className="flex w-80">
+        <div className="flex w-96 sm:w-80 sm:mx-5">
           <PriceBox
             title="Bono mensual 2"
             price="XX"
@@ -55,7 +55,7 @@ export default function PricesPage() {
             ]}
           />
         </div>
-        <div className="flex w-80">
+        <div className="flex w-96 sm:w-80">
           <PriceBox
             title="Bono mensual 3"
             price="XX"
