@@ -16,7 +16,7 @@ export default function PricesPage() {
   const handleTouchEnd = (e: any) => {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
-    if (deltaX > 50) router.push("/patologias");
+    if (deltaX > 50) router.push("/tratamientos");
     else if (deltaX < -50) router.push("/contacto");
 
     setTouchStartX(0);
@@ -29,7 +29,7 @@ export default function PricesPage() {
       onTouchEnd={handleTouchEnd}
     >
       <Header currentPage="Tarifas" />
-      <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas:</h1>
+      <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas</h1>
       <div className="flex flex-wrap justify-center">
         <div className="flex w-96 sm:w-80">
           <PriceBox

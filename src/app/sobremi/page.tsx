@@ -19,7 +19,7 @@ export default function AboutMePage() {
     const deltaX = e.changedTouches[0].clientX - touchStartX;
 
     if (deltaX > 50) router.push("/");
-    else if (deltaX < -50) router.push("/patologias");
+    else if (deltaX < -50) router.push("/tratamientos");
 
     setTouchStartX(0);
   };

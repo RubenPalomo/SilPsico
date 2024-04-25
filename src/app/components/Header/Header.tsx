@@ -14,7 +14,7 @@ export default function Header({ currentPage }: { currentPage: string }) {
         menuElements={[
           "Inicio",
           "Sobre mi",
-          "Patologias",
+          "Tratamientos",
           "Tarifas",
           "Contacto",
         ]}
