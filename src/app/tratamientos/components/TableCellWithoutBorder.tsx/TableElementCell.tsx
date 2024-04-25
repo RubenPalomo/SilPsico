@@ -1,10 +1,10 @@
 import React from "react";
 import { TableCell } from "@mui/material";
 
-export default function TableCellWithoutBorder({
+export default function TableElementCell({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <TableCell className="border-none py-1">{children}</TableCell>;
+  return <TableCell className="py-1">{children}</TableCell>;
 }

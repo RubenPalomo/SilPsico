@@ -1,5 +1,5 @@
 import React from "react";
-import TableCellWithoutBorder from "../TableCellWithoutBorder.tsx/TableCellWithoutBorder";
+import TableElementCell from "../TableCellWithoutBorder.tsx/TableElementCell";
 import { TableRow } from "@mui/material";
 import { TableElementProps } from "./TableElement.props";
 import TickImage from "../TickImage/TickImage";
@@ -8,21 +8,21 @@ export default function TableElement({ text, remote }: TableElementProps) {
   if (remote)
     return (
       <TableRow>
-        <TableCellWithoutBorder>{text}</TableCellWithoutBorder>
-        <TableCellWithoutBorder> </TableCellWithoutBorder>
-        <TableCellWithoutBorder>
+        <TableElementCell>{text}</TableElementCell>
+        <TableElementCell> </TableElementCell>
+        <TableElementCell>
           <TickImage />
-        </TableCellWithoutBorder>
+        </TableElementCell>
       </TableRow>
     );
   else
     return (
       <TableRow>
-        <TableCellWithoutBorder>{text}</TableCellWithoutBorder>
-        <TableCellWithoutBorder>
+        <TableElementCell>{text}</TableElementCell>
+        <TableElementCell>
           <TickImage />
-        </TableCellWithoutBorder>
-        <TableCellWithoutBorder> </TableCellWithoutBorder>
+        </TableElementCell>
+        <TableElementCell> </TableElementCell>
       </TableRow>
     );
 }

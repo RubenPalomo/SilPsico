@@ -9,9 +9,10 @@ import {
   TableHead,
   TableBody,
   TableRow,
+  TableCell,
 } from "@mui/material";
 import TableElement from "./components/TableElement/TableElement";
-import TableCellWithoutBorder from "./components/TableCellWithoutBorder.tsx/TableCellWithoutBorder";
+import TableElementCell from "./components/TableCellWithoutBorder.tsx/TableElementCell";
 
 export default function Treatments() {
   const router = useRouter();
@@ -38,35 +39,39 @@ export default function Treatments() {
     >
       <Header currentPage="Tratamientos" />
       <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tratamientos</h1>
-      <TableContainer className="overflow-hidden">
-        <Table aria-label="treatments-table">
-          <TableHead>
+      <TableContainer style={{ overflowX: "initial" }}>
+        <Table aria-label="treatments-table" stickyHeader>
+          <TableHead className="sticky top-24 bg-white">
             <TableRow>
-              <TableCellWithoutBorder> </TableCellWithoutBorder>
-              <TableCellWithoutBorder>
-                <p className="font-bold">Remoto</p>
-              </TableCellWithoutBorder>
-              <TableCellWithoutBorder>
-                <p className="font-bold">Domicilio</p>
-              </TableCellWithoutBorder>
+              <TableCell />
+              <TableElementCell>
+                <p className="font-bold">Online</p>
+              </TableElementCell>
+              <TableElementCell>
+                <p className="font-bold">Presencial</p>
+              </TableElementCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCellWithoutBorder>
+              <TableElementCell>
                 <p className="font-bold">Daño cerebral adquirido</p>
-              </TableCellWithoutBorder>
+              </TableElementCell>
+              <TableCell />
+              <TableCell />
             </TableRow>
             <TableElement text="Traumatismo craneoencefálico" remote={true} />
             <TableElement text="Accidente cerebrovascular" remote={true} />
             <TableElement text="Tumores cerebrales" remote={true} />
             <TableElement text="Infecciones cerebrales" remote={true} />
             <TableRow>
-              <TableCellWithoutBorder>
+              <TableElementCell>
                 <p className="font-bold mt-4">
                   Enfermedades neurodegenerativas
                 </p>
-              </TableCellWithoutBorder>
+              </TableElementCell>
+              <TableCell />
+              <TableCell />
             </TableRow>
             <TableElement text="Alzheimer" remote={true} />
             <TableElement text="Parkinson" remote={true} />
@@ -74,11 +79,13 @@ export default function Treatments() {
             <TableElement text="Demencia frontotemporal" remote={true} />
             <TableElement text="Deterioro cognitivo leve" remote={true} />
             <TableRow>
-              <TableCellWithoutBorder>
+              <TableElementCell>
                 <p className="font-bold mt-4">
                   Transtornos del neurodesarrollo
                 </p>
-              </TableCellWithoutBorder>
+              </TableElementCell>
+              <TableCell />
+              <TableCell />
             </TableRow>
             <TableElement text="Transtorno del especto autista" remote={true} />
             <TableElement
@@ -86,9 +93,11 @@ export default function Treatments() {
               remote={true}
             />
             <TableRow>
-              <TableCellWithoutBorder>
+              <TableElementCell>
                 <p className="font-bold mt-4">Psicología clínica</p>
-              </TableCellWithoutBorder>
+              </TableElementCell>
+              <TableCell />
+              <TableCell />
             </TableRow>
             <TableElement text="Ansiedad" remote={false} />
             <TableElement text="Depresión" remote={false} />
