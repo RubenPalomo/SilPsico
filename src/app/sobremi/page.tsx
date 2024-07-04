@@ -6,6 +6,8 @@ import Header from "../components/Header/Header";
 import Title from "./components/Title/Title";
 import Image from "next/image";
 import sil from "./components/sil.jpeg";
+import logo from "../components/consulta.jpg";
+import BackgroundImage from "../components/BackgroundImage/BackgroundImage";
 
 export default function AboutMePage() {
   const router = useRouter();
@@ -32,6 +34,7 @@ export default function AboutMePage() {
       onTouchEnd={handleTouchEnd}
     >
       <Header currentPage="Sobre Mi" />
+      <BackgroundImage image={logo} opacity={10}/>
       <div className="flex flex-wrap justify-center md:justify-between w-[90vw] mx-6">
         <div className="flex justify-center w-full xl:w-96">
           <Image

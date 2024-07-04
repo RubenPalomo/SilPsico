@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import logo from "./components/consulta.jpg";
+import BackgroundImage from "./components/BackgroundImage/BackgroundImage";
 
 export default function Home() {
   const router = useRouter();
@@ -32,13 +32,7 @@ export default function Home() {
       onTouchEnd={handleTouchEnd}
     >
       <Header currentPage="/" />
-      <Image
-        src={logo}
-        alt="logo"
-        className="opacity-20 w-full"
-        layout="fill"
-        objectFit="cover"
-      />
+      <BackgroundImage image={logo} opacity={20} />
       <div className="flex flex-col justify-center items-center w-full h-screen">
         <div className="flex flex-col items-center">
           <h1 className="font-bold text-2xl sm:text-4xl text-center">

@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import TextArea from "./components/TextArea/TextArea";
+import logo from "../components/consulta.jpg";
+import BackgroundImage from "../components/BackgroundImage/BackgroundImage";
 
 export default function PathologiesPage() {
   const router = useRouter();
@@ -30,6 +32,7 @@ export default function PathologiesPage() {
       onTouchEnd={handleTouchEnd}
     >
       <Header currentPage="Patologias" />
+      <BackgroundImage image={logo} opacity={10}/>
       <div className="flex flex-wrap justify-between w-[95vw]">
         <div className="flex w-full sm:w-[45vw] my-10">
           <TextArea

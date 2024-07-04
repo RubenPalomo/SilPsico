@@ -14,7 +14,7 @@ import {
 import TableElement from "./components/TableElement/TableElement";
 import TableElementCell from "./components/TableCellWithoutBorder.tsx/TableElementCell";
 
-export default function Treatments() {
+export default function TreatmentsPage() {
   const router = useRouter();
   const [touchStartX, setTouchStartX] = useState(0);
 
@@ -41,7 +41,7 @@ export default function Treatments() {
       <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tratamientos</h1>
       <TableContainer style={{ overflowX: "initial" }}>
         <Table aria-label="treatments-table" stickyHeader>
-          <TableHead className="sticky top-24 bg-white">
+          <TableHead className="sticky top-20 bg-white">
             <TableRow>
               <TableCell />
               <TableElementCell>

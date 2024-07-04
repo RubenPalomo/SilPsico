@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import PriceBox from "./components/PriceBox/PriceBox";
+import logo from "../components/consulta.jpg";
+import BackgroundImage from "../components/BackgroundImage/BackgroundImage";
 
 export default function PricesPage() {
   const router = useRouter();
@@ -29,6 +31,7 @@ export default function PricesPage() {
       onTouchEnd={handleTouchEnd}
     >
       <Header currentPage="Tarifas" />
+      <BackgroundImage image={logo} opacity={10}/>
       <h1 className="text-2xl font-bold mx-auto my-5 w-[80vw]">Tarifas</h1>
       <div className="flex flex-wrap justify-center">
         <div className="flex w-96 sm:w-80">
